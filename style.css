@@ -1,205 +1,179 @@
 :root {
-  --primary-color: #2d3436;
-  --secondary-color: #0984e3;
-  --text-color: #2d3436;
-  --bg-color: #f5f6fa;
-  --section-bg: #ffffff;
+    --primary: #008000;
+    --primary-dark: #53B365;
+    --primary-color-letter: #73D586;
+    --primary-color-backgroud: #1B2B1D;
+    --bg-dark: #111210;
+    --text-light: #fff;
+    --card-bg: rgba(255, 255, 255, 0.1);
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
 }
 
-/* Header Styles */
-header {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 2rem 0;
-  text-align: center;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.profile-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Header */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 .profile-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  border: 3px solid var(--secondary-color);
-  background-color: #ddd;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-/* Navigation */
-nav {
-  background-color: var(--secondary-color);
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+.profile-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    /* color: var(--primary); */
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+.profile-info h2 {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
 }
 
-nav a:hover {
-  color: #ddd;
+.social-link {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
 }
 
-/* Main Content */
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+.social-link-secondary {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-dark);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
 }
 
+.social-link-secondary i {
+    color: var(--primary-dark);
+}
+
+.social-link:hover {
+    background-color: var(--primary);
+}
+
+/* Sections */
 section {
-  background-color: var(--section-bg);
-  border-radius: 8px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 3rem 0;
 }
 
-h2 {
-  color: var(--secondary-color);
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid var(--secondary-color);
-  padding-bottom: 0.5rem;
+hr {
+    opacity: 30%;
+}
+section h3 {
+    font-size: 1.8rem;
+    color: var(--text-light);
+    /* margin-bottom: 1.5rem; */
 }
 
-/* Skills Section */
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+/* Tech Stack */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.skill-card {
-  background-color: #f8f9fa;
-  padding: 1rem;
-  border-radius: 6px;
-  text-align: center;
-  transition: transform 0.3s;
+.tech-item {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color-backgroud);
+    color: var(--primary-dark);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.skill-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Projects Section */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+/* Projects */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .project-card {
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .project-image {
-  width: 100%;
-  height: 200px;
-  background-color: #ddd;
-  object-fit: cover;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .project-info {
-  padding: 1.5rem;
+    padding: 1.5rem;
 }
 
-/* Contact Section */
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
+.project-info h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
 }
 
-.form-group {
-  margin-bottom: 1rem;
+/* Experience */
+.experience-item {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
-input,
-textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-top: 0.5rem;
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
-button {
-  background-color: var(--secondary-color);
-  color: white;
-  padding: 0.8rem 2rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #0873c4;
-}
-
-/* Footer */
-footer {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: 2rem;
-  margin-top: 2rem;
-}
-
-.social-links {
-  margin-top: 1rem;
-}
-
-.social-links a {
-  color: white;
-  margin: 0 1rem;
-  text-decoration: none;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
+.date-badge {
+    background-color: var(--primary-dark);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
 }

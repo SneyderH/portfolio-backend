@@ -4,104 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <script href="main.js"></script>
-    <title>Mi Portafolio - Desarrollador Backend</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Portfolio Sneyder</title>
 </head>
 <body>
-    <header>
-        <div class="profile-container">
-            <img src="/api/placeholder/150/150" alt="Tu Foto" class="profile-image">
-            <h1>Tu Nombre</h1>
-            <p>Desarrollador Backend</p>
-        </div>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#sobre-mi">Sobre Mí</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="sobre-mi">
-            <h2>Sobre Mí</h2>
-            <p>Soy un desarrollador backend apasionado por crear soluciones eficientes y escalables. Me especializo en el desarrollo de APIs RESTful y la implementación de arquitecturas robustas.</p>
-        </section>
-
-        <section id="habilidades">
-            <h2>Habilidades Técnicas</h2>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <h3>Backend</h3>
-                    <p>Node.js, Python, Java</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Bases de Datos</h3>
-                    <p>MySQL, MongoDB, PostgreSQL</p>
-                </div>
-                <div class="skill-card">
-                    <h3>DevOps</h3>
-                    <p>Docker, Git, CI/CD</p>
-                </div>
-                <div class="skill-card">
-                    <h3>APIs</h3>
-                    <p>REST, GraphQL</p>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <img src="scr/images/SNEYDER HOYOS.pdf.png" alt="Profile" class="profile-image">
+            <div class="profile-info">
+                <h1>Sneyder Hoyos Londoño</h1>
+                <h2>Programador Backend</h2>
+                <p><i class="fa-solid fa-location-dot"></i> Colombia, Antioquia</p>
+                <div class="social-links">
+                    <a href="mailto:sneyderhl2002@gmail.com" class="social-link">sneyderhl2002@gmail.com</a>
+                    <a href="scr/files/SNEYDER HOYOS V2.pdf" download class="social-link-secondary"><i class="fa-regular fa-file"></i></a>
+                    <a href="https://github.com/SneyderH" target="_blank" class="social-link-secondary"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sneyder-hoyos/" target="_blank" class="social-link-secondary"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section id="proyectos">
-            <h2>Proyectos Destacados</h2>
-            <div class="projects-grid">
+        <!-- About Section -->
+        <section>
+            <h3>Sobre mí</h3>
+            <p>Soy un desarrollador backend apasionado por el aprendizaje usando C# como tecnología principal. Me encanta resolver problemas, crear soluciones innovadoras y automatizar procesos; siempre estoy aprendiendo cosas nuevas relacionadas al desarrollo y las aplico de manera autónoma.</p>
+        </section>
+        <hr>
+
+        <!-- Technologies Section -->
+        <section>
+            <h3>Tecnologías</h3>
+            <div class="tech-stack">
+                <div class="tech-item"><img src="scr/icons/icons8-c-sharp-logotipo-50.png" width="32"><strong>C#</strong></div>
+                <div class="tech-item"><img src="scr/icons/icons8-net-32.png" width="40"><strong>.NET</strong></div>
+                <div class="tech-item"><img src="scr/icons/icons8-base-de-datos-50.png" width="32"><strong>SQL</strong></div>
+            </div>
+        </section>
+        <!-- Projects Section -->
+         <section>
+            <h3>Experiencia</h3>
+         </section>
+        <!-- Projects Section -->
+        <section>
+            <h3>Proyectos</h3>
+            <div class="projects">
                 <div class="project-card">
-                    <img src="/api/placeholder/300/200" alt="Proyecto 1" class="project-image">
+                    <img src="/api/placeholder/400/200" alt="Software random" class="project-image">
                     <div class="project-info">
-                        <h3>Nombre del Proyecto 1</h3>
-                        <p>Descripción breve del proyecto y tecnologías utilizadas.</p>
-                        <button onclick="window.location.href='#'">Ver Proyecto</button>
+                        <h4>Software random</h4>
+                        <p>Software propiedad de Metacortex</p>
+                        <p>Herramienta para hacer rico a otras personas.</p>
+                        <div class="tech-stack">
+                            <div class="tech-item">Python</div>
+                            <div class="tech-item">Django</div>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="/api/placeholder/300/200" alt="Proyecto 2" class="project-image">
+                    <img src="/api/placeholder/400/200" alt="Hackeo Matrix" class="project-image">
                     <div class="project-info">
-                        <h3>Nombre del Proyecto 2</h3>
-                        <p>Descripción breve del proyecto y tecnologías utilizadas.</p>
-                        <button onclick="window.location.href='#'">Ver Proyecto</button>
+                        <h4>Hackeo Matrix</h4>
+                        <p>Mi obra maestra</p>
+                        <p>Migración del Matrix al mundo real y hackeo del sistema ficticio para salvar a la humanidad.</p>
+                        <div class="tech-stack">
+                            <div class="tech-item">Binario</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+    </div>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <form class="contact-form" id="contact-form">
-                <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit">Enviar Mensaje</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 Tu Nombre - Todos los derechos reservados</p>
-        <div class="social-links">
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-            <a href="#">Twitter</a>
-        </div>
-    </footer>
+    <script>
+        
+    </script>
 </body>
 </html>
