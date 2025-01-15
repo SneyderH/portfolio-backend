@@ -94,6 +94,58 @@ body {
     background-color: var(--primary);
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-info h1 {
+        font-size: 2rem;
+    }
+
+    .profile-info h2 {
+        font-size: 1rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .social-link, .social-link-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile-info h2 {
+        font-size: 0.9rem;
+    }
+
+    .social-link, .social-link-secondary {
+        padding: 0.5rem;
+    }
+}
+
 /* Sections */
 section {
     margin: 3rem 0;
@@ -235,6 +287,12 @@ section h3 {
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.projects-social-links {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
 }
 
 .tecnology-link-secondary {
